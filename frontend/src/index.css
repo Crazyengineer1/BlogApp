@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers all elements inside the form */
+}
+
+.auth-form label {
+    display: block;
+    margin: 12px 0 2px 0;
+    font-weight: 600;
+}
+
+.auth-form input {
+    height: 2.8vh;
+    width: 12vw;
+    display: block;
+}
+
+/* Registration form CSS */
+
+.reg-inp-out {
+    /* border: 2px solid green; */
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.reg-inp-in {
+    background-color: #fff;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    box-shadow: 0.4vw -0.4vh 20px rgb(194, 6, 211);
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sub-reg {
+    background: linear-gradient(to left, black 50%, rgb(122, 2, 152) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    color: #fff;
+    height: 4.5vh;
+    width: 12vw;
+    display: block;
+    margin: 10px auto;
+    /* Centers the button */
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-position 0.4s ease-in-out;
+}
+
+.btn-sub-reg:hover {
+    background-position: left;
+    /* Slides the color transition */
+}
+
+/* Spinner CSS */
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Login CSS */
+
+.log-inp-out {
+    /* border: 2px solid red; */
+    background-color: black;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-inp-in {
+    background-color: #fff;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    box-shadow: 0.4vw -0.4vh 20px rgb(12, 37, 231);
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sub-log {
+    background: linear-gradient(to left, black 50%, rgb(24, 41, 230) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    color: #fff;
+    height: 4.5vh;
+    width: 12vw;
+    display: block;
+    margin: 10px auto;
+    /* Centers the button */
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-position 0.4s ease-in-out;
+}
+
+.btn-sub-log:hover {
+    background-position: left;
+    /* Slides the color transition */
+}
+
+/* Navbar CSS */
+
+.container {
+    background-color: rgb(44, 42, 54);
+    padding: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a {
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+nav {
+    padding-right: 20px;
+}
+
+ul {
+    display: flex;
+    gap: 3.2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: rgb(175, 23, 236);
+}
+
+nav ul li a.active {
+    color: rgb(175, 23, 236);
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+.profile-pic img {
+    width: 2vw;
+    height: 3vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(44, 42, 54);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout:hover {
+    color: rgb(175, 23, 236);
+}
+
+/* User page CSS */
+
+.user-info-1 {
+    display: flex;
+}
+
+.user-info-1-1 img {
+    /* display: inline-block; */
+    margin: 4vh 0 0 2vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info-1-2 {
+    padding: 5vh 0 0 1vw;
+}
+
+.user-info-1-2 p {
+    padding: 0.5vw 0 0 0;
+}
+
+.user-info-2 {
+    margin: 1vh 0 0 0;
+}
+
+.options {
+    margin: 0 0 0 2vw;
+    text-decoration: none;
+    font-size: large;
+    padding: 1.5vh 0 1.5vh 0;
+    /* border-top: 2px solid green; */
+}
+
+.options a {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.options a:hover {
+    color: rgb(26, 105, 33);
+}
+
+.lo {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.lo:hover {
+    color: #d2001a;
+}
+
+/* Create page CSS */
+
+.blog-inp-out {
+    background-color: #000000;
+    height: 92.5vh;
+}
+
+.blog-inp-in label {
+    display: block;
+    padding: 12px 0 0 0;
+    font-weight: 600;
+    font-size: large;
+    color: white;
+}
+
+.blog-inp-in textarea {
+    display: block;
+    margin: 0 0 0 2vw;
+    max-width: 97.5%;
+    overflow-x: hidden;
+    background-color: #000700;
+    color: rgb(11, 136, 11);
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}
+
+.blog-sub {
+    border-radius: 8px;
+    font-size: large;
+    width: 7vw;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.blog-sub:hover {
+    color: rgb(14, 177, 14);
+    background-color: #191717;
+}
+
+/* Home page CSS */
+
+.blog-cont {
+    /* border: 2px solid red; */
+    border-bottom: 2px solid grey;
+    border-top: 1px solid grey;
+    /* margin: 0 0 1.5vh 0; */
+    padding: 1vh 0 2vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+/* Contact page CSS */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0 0 0;
+}
+
+.contact-form button {
+    margin: 1vh 0 0 0;
+    width: 10vw;
+}
+
+/* Message Page CSS */
+
+.message-cont {
+    border-bottom: 2px solid grey;
+    border-top: 1px solid grey;
+    padding: 1vh 0 2vh 0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.message-cont-in {
+    display: flex;
+    flex-direction: column;
+}
+
+.del {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.del button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.del button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Manage Blog CSS */
+
+.manage-blog-cont {
+    border-bottom: 2px solid grey;
+    border-top: 1px solid grey;
+    padding: 1vh 0 2vh 0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.manage-blog-cont-in {
+    display: flex;
+    flex-direction: column;
+}
