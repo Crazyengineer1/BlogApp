@@ -8,7 +8,8 @@ const Blog = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/${id}`)
+                console.log(id);
+                const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/blog/${id}`)
                 setBlog(response.data)
             }
             catch (err) {
