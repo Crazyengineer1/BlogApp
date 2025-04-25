@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const UploadProfileImage = () => {
@@ -30,18 +30,24 @@ const UploadProfileImage = () => {
     }
   };
 
-  return (<>
-    <form onSubmit={handleUpload}>
-      <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-      <button type="submit">Upload</button>
-    </form>
-    {loading && (
-      <div className="spinner-overlay">
-        <div className="spinner"></div>
-      </div>
-    )}
+  useEffect(() => {
+    document.title = "Change Profile Image";
+  })
 
-  </>
+  return (
+    <>
+      <h1>Only .jpeg, .jpg & .png images with size of maximum 1MB are allowed</h1>
+      <form onSubmit={handleUpload}>
+        <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+        <button type="submit">Upload</button>
+      </form>
+      {loading && (
+        <div className="spinner-overlay">
+          <div className="spinner"></div>
+        </div>
+      )}
+
+    </>
   );
 };
 

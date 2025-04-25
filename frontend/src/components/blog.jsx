@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom'
 const Blog = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState(null)
+
+    console.log("Rendering Blog Component with:", blog);
+
     useEffect(() => {
         const fetchBlog = async () => {
             try {
@@ -19,6 +22,14 @@ const Blog = () => {
 
         fetchBlog();
     }, [id])
+
+    useEffect(() => {
+        if (blog) {
+            document.title = blog.title; // Set tab title to blog title
+        } else {
+            document.title = "Loading..."; // Set default title when blog is loading
+        }
+    }, [blog]);
 
     return (
         <>

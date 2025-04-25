@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 // import "./login.css"
 
-const login = ({ setIsLoggedIn }) => {
+const Login = ({ setIsLoggedIn }) => {
     const [user, setUser] = useState({
         username: "",
         password: "",
@@ -55,6 +55,10 @@ const login = ({ setIsLoggedIn }) => {
         }
         setLoading(false)
     }
+
+    useEffect(() => {
+        document.title = "Login";
+    })
     return (
         <>
             <div className="log-inp-out">
@@ -102,4 +106,4 @@ const login = ({ setIsLoggedIn }) => {
     )
 }
 
-export default login
+export default Login

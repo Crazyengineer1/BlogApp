@@ -8,6 +8,10 @@ const UserProfile = ({ setIsLoggedIn }) => {
     const [error, setError] = useState(null);       // stores any error
 
     useEffect(() => {
+        document.title = "User profile";
+    })
+
+    useEffect(() => {
         const fetchUserProfile = async () => {
             const token = JSON.parse(localStorage.getItem("user"));
 
@@ -46,6 +50,7 @@ const UserProfile = ({ setIsLoggedIn }) => {
         setIsLoggedIn(false);
         navigate("/login");
     };
+
 
     return (
         <>

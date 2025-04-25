@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Contact = () => {
 
@@ -44,6 +44,10 @@ const Contact = () => {
         }
 
     }
+
+    useEffect(() => {
+        document.title = "Contact page";
+    })
 
     return (
         <>

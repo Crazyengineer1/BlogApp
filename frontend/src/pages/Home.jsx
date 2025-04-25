@@ -23,6 +23,10 @@ const Home = () => {
         navigate(`/blog/${e}`);
     }
 
+    useEffect(() => {
+        document.title = "Home";
+    })
+
     return (
         <>
             <div>

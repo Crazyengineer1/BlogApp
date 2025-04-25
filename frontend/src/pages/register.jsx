@@ -53,6 +53,10 @@ const Register = ({ setIsLoggedIn }) => {
         setLoading(false);
     }
 
+    useEffect(() => {
+        document.title = "Register";
+    })
+
     return <>
         <div className="reg-inp-out">
             <div className="reg-inp-in">
