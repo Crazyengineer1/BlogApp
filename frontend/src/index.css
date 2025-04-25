@@ -327,8 +327,6 @@ nav ul li a.active {
 
 .blog-cont {
     /* border: 2px solid red; */
-    border-bottom: 2px solid grey;
-    border-top: 1px solid grey;
     /* margin: 0 0 1.5vh 0; */
     padding: 1vh 0 2vh 0;
     display: flex;
@@ -337,6 +335,44 @@ nav ul li a.active {
     cursor: pointer;
 
 }
+
+.home-container {
+    padding: 1rem;
+}
+
+.blog-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-2px);
+    background-color: #f9f9f9;
+}
+
+.blog-card .title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.blog-card .snippet {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card .read-more {
+    font-weight: bold;
+    color: #007bff;
+}
+
 
 /* Contact page CSS */
 

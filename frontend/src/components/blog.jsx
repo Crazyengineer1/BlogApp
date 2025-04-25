@@ -6,8 +6,6 @@ const Blog = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState(null)
 
-    console.log("Rendering Blog Component with:", blog);
-
     useEffect(() => {
         const fetchBlog = async () => {
             try {

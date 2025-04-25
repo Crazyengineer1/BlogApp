@@ -32,12 +32,15 @@ const Home = () => {
             <div>
                 {blogs.map((blog, index) => (
                     <div key={index} className='blog-cont' onClick={() => handeBlogClick(blog._id)}>
-                        <h2>{blog.title}</h2>
-                        <p>
-                            {blog.content.length > 150
-                                ? `${blog.content.slice(0, 150)}...`
-                                : blog.content}
-                        </p>
+                        <div key={index} className="blog-card" onClick={() => handeBlogClick(blog._id)}>
+                            <h2 className="title">{blog.title}</h2>
+                            <p className="snippet">
+                                {blog.content.length > 150
+                                    ? `${blog.content.slice(0, 150)}...`
+                                    : blog.content}
+                            </p>
+                            <p className="read-more">Read More →</p>
+                        </div>
                     </div>
                 ))}
             </div>

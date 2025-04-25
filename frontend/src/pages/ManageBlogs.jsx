@@ -60,16 +60,14 @@ const ManageBlogs = () => {
         <>
             <div>
                 {blogs.map((blog, index) => (
-                    <div key={index} className='manage-blog-cont' onClick={() => handeBlogClick(blog._id)}>
-                        <div className="manage-blog-cont-in">
-
-                            <h2>{blog.title}</h2>
-                            <p>
-                                {blog.content.length > 150
-                                    ? `${blog.content.slice(0, 150)}...`
-                                    : blog.content}
-                            </p>
-                        </div>
+                    <div key={index} className="blog-card" onClick={() => handeBlogClick(blog._id)}>
+                        <h2 className="title">{blog.title}</h2>
+                        <p className="snippet">
+                            {blog.content.length > 150
+                                ? `${blog.content.slice(0, 150)}...`
+                                : blog.content}
+                        </p>
+                        <p className="read-more">Read More →</p>
                         <div className="del">
                             <button onClick={() => handleDelete(blog._id)}>Delete</button>
                         </div>
