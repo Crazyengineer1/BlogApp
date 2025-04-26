@@ -37,18 +37,24 @@ const ChangePassword = () => {
             }
             // console.log(passwords.op);
 
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/change-password`, {
-                op: passwords.oP,
-                np: passwords.nP,
-            }, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/change-password`, {
+                method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,
                     "Content-Type": "application/json",
                 },
+                body: JSON.stringify({ "op": passwords.oP, "np": passwords.nP })
             });
-            setLoading(false)
-            navigate("/")
-            alert("Password Changed");
+
+            if (!response.ok) {
+                setLoading(false)
+                const data = await response.json();
+                alert(data.message);
+            } else {
+                setLoading(false)
+                navigate("/")
+                alert("Password Changed");
+            }
         } catch (error) {
             setLoading(false)
             console.error("Change password", error)
