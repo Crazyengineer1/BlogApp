@@ -39,6 +39,7 @@ const Messages = () => {
 
             } catch (err) {
                 setLoading(false)
+                alert(err.response.data)
                 console.log("Message", err);
             }
 
