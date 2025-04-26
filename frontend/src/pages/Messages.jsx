@@ -48,7 +48,7 @@ const Messages = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch('http://localhost:5500/delete-message', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/delete-message`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

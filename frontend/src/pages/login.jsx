@@ -29,7 +29,7 @@ const Login = ({ setIsLoggedIn }) => {
 
         try {
 
-            const response = await fetch(`http://localhost:5500/login`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
