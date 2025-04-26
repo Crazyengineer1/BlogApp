@@ -23,6 +23,8 @@ app.use(router)
 
 app.use('/uploads', express.static('uploads'));
 
-app.listen(port, () => {
-    console.log(`App running on port ${port}`);
-})
+// app.listen(port, () => {
+//     console.log(`App running on port ${port}`);
+//})
+
+module.exports = app;
