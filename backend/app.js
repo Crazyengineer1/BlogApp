@@ -12,6 +12,9 @@ connectDB()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+
+console.log("Frontend", process.env.FRONTEND_URL);
+
 const corsOptions = {
     origin: process.env.FRONTEND_URL,
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
