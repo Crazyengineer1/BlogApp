@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
     origin: process.env.FRONTEND_URL,
-    method: "GET, POST, PUT, DELETE, PATCH, HEAD",
+    methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };
 
